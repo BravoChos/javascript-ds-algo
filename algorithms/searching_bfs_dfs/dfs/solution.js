@@ -220,8 +220,8 @@ class Node {
   // tree.remove(170);
   // JSON.stringify(traverse(tree.root))
   
-  console.log('BFS', tree.BreadthFirstSearch());
-  console.log('BFS', tree.BreadthFirstSearchR([tree.root], []))
+//   console.log('BFS', tree.BreadthFirstSearch());
+//   console.log('BFS', tree.BreadthFirstSearchR([tree.root], []))
   console.log('DFSpre', tree.DFTPreOrder());
   console.log('DFSin', tree.DFTInOrder());
   console.log('DFSpost', tree.DFTPostOrder());
