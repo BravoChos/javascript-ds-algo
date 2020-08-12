@@ -38,3 +38,16 @@ console.log(twoSumType2([2, 7, 11, 15], 9));
 console.log(twoSumType2([3, 5, 12, 2, 1], 4));
 console.log(twoSumType2([-3, 1, 2, 5, 0], 2));
 console.log(twoSumType2([3, 2, 4], 6));
+
+var twoSumType3 = function (nums, target) {
+  var saved = {};
+  var result = [];
+  for (i = 0; i < nums.length; i++) {
+    if (saved.hasOwnProperty(nums[i])) {
+      result[0] = saved[nums[i]] + 1;
+      result[1] = i + 1;
+      return result;
+    }
+    saved[target - nums[i]] = i;
+  }
+};
