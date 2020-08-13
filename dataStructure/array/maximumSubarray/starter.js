@@ -1,3 +1,7 @@
-var twoSum = function(nums, target) {
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) {
     
 };
