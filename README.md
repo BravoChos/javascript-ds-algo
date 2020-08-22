@@ -34,3 +34,7 @@ Technical:
 - Breadth First Search
 - Depth First Search
 - Dynamic Programming
+
+4. Codility:
+   resource: https://app.codility.com
+   copyright by codility
