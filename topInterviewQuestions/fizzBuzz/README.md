@@ -1,32 +1,23 @@
-<!-- https://leetcode.com/problems/fizz-buzz/ -->
+<!-- https://leetcode.com/problems/single-number/ -->
 
-**412. Fizz Buzz (Easy)**
+**136. Single Number (Easy)**
 
-Write a program that outputs the string representation of numbers from 1 to n.
+Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 
-But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
+Note:
 
-**Example 1:**
+Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+
+Example 1:
 
 ```
-n = 15,
+Input: [2,2,1]
+Output: 1
+```
 
-Return:
-[
-    "1",
-    "2",
-    "Fizz",
-    "4",
-    "Buzz",
-    "Fizz",
-    "7",
-    "8",
-    "Fizz",
-    "Buzz",
-    "11",
-    "Fizz",
-    "13",
-    "14",
-    "FizzBuzz"
-]
+Example 2:
+
+```
+Input: [4,1,2,1,2]
+Output: 4
 ```
