@@ -1,18 +1,26 @@
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
 
-function solution(A, B, K) {
+// Detected time complexity: O(N + M)
+function solution(S, P, Q) {
   // write your code in JavaScript (Node.js 8.9.4)
-  const resultA = Math.ceil(A / K);
-  const resultB = Math.ceil((B + 1) / K);
-  result = resultB - resultA;
-  return result;
+  let resultArr = [];
+  for (let i = 0; i < P.length; i++) {
+    // slice메소드는 두 번째 index까지는 포함시키지 않으므로 포함해서 자를수있도록 +1 해줌
+    let temp = S.slice(P[i], Q[i] + 1);
+
+    if (temp.indexOf("A") !== -1) {
+      resultArr.push(1);
+    } else if (temp.indexOf("C") !== -1) {
+      resultArr.push(2);
+    } else if (temp.indexOf("G") !== -1) {
+      resultArr.push(3);
+    } else {
+      resultArr.push(4);
+    }
+  }
+  return resultArr;
 }
 
-// - resultA : round up (A / K)
-// - resultB : round up (B+1) / K
-
-console.log(solution(1, 5, 2));
-console.log(solution(0, 5, 2));
-console.log(solution(6, 11, 2));
-console.log(solution(10, 10, 7)); //0
+console.log(solution("CAGCCTA", [2, 5, 0], [4, 5, 6])); // 2,4,1
+console.log(solution("AC", [0, 0, 1], [0, 1, 1])); //1,1,2
