@@ -1,31 +1,45 @@
 // you can write to stdout for debugging purposes, e.g.
 // console.log('this is a debug message');
+// Detected time complexity:O(N)
 
-// fail. T-T.....
 function solution(A) {
   // write your code in JavaScript (Node.js 8.9.4)
+  if (A.length === 1) {
+    return 0;
+  }
+  if (A.length > 100000) {
+    return -1;
+  }
 
-  let startingIndex = 0;
+  let zeroCount = 0;
+  let oneCount = 0;
+  let result = 0;
+  for (let i = 0; i < A.length; i++) {
+    if (A[i] === 0) {
+      zeroCount += 1;
+    }
 
-  let prevMinAvg;
-  let nextMinAvg;
-  for (var i = 1; i < A.length; i++) {
-    // number of..
-    n = i - startingIndex + 1;
+    if (A[i] === 1) {
+      result += zeroCount;
+      oneCount += 1;
+    }
 
-    if (i === 1) {
-      prevMinAvg = (A[i - 1] + A[i]) / 2;
-    } else {
-      nextMinAvg = ((n - 1) * prevMinAvg + A[i]) / n;
-      newMinAvg = (A[i - 1] + A[i]) / 2;
-
-      if (prevMinAvg < nextMinAvg && prevMinAvg < newMinAvg) {
-      }
+    if (result > 1000000000) {
+      return -1;
     }
   }
-  return startingIndex;
+
+  if ((zeroCount === 0 && oneCount > 0) || (zeroCount > 0 && oneCount === 0)) {
+    return 0;
+  } else {
+    return result;
+  }
 }
 
-console.log(solution([4, 2, 2, 5, 1, 5, 8]));
-
-// [1,2,3,4]
+console.log(solution([0, 1, 0, 1, 1]));
+console.log(solution([0]));
+console.log(solution([1]));
+console.log(solution([0, 1]));
+console.log(solution([1, 0]));
+console.log(solution([1, 1]));
+console.log(solution([0, 0]));
