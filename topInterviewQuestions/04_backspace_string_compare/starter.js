@@ -1,7 +1,8 @@
 /**
- * @param {number[]} height
- * @return {number}
+ * @param {string} S
+ * @param {string} T
+ * @return {boolean}
  */
-var trap = function(height) {
+var backspaceCompare = function(S, T) {
     
 };
