@@ -1,8 +1,7 @@
 /**
- * @param {string} S
- * @param {string} T
- * @return {boolean}
+ * @param {string}
+ * @return {number}
  */
-var backspaceCompare = function(S, T) {
+var lengthOfLongestSubstring = function (s) {
     
 };
