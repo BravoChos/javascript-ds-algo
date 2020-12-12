@@ -1,34 +1,30 @@
-const string1 = "ab#z";
-const string2 = "az#z";
+const string = "abccabb"
 
-const buildString = function (string) {
-  const builtString = [];
-  for (let p = 0; p < string.length; p++) {
-    if (string[p] !== "#") {
-      builtString.push(string[p]);
-    } else {
-      builtString.pop();
-    }
-  }
+// Time: O(N^2);
+// Space: O(N)
 
-  return builtString;
-};
+const lengthOfLongestSubstring = function(s) {
+    if(s.length <= 1) return s.length;
+    
+    let longest = 0;
+    
+    for(let left = 0; left < s.length; left++) {
+      let seenChars = {}, currentLength = 0;
 
-var backspaceCompare = function (S, T) {
-  const finalS = buildString(S);
-  const finalT = buildString(T);
+      for(let right = left; right < s.length; right++) {
+        const currentChar = s[right];
 
-  if (finalS.length !== finalT.length) {
-    return false;
-  } else {
-    for (let p = 0; p < finalS.length; p++) {
-      if (finalS[p] !== finalT[p]) {
-        return false;
+        if(!seenChars[currentChar]) {
+          currentLength++;
+          seenChars[currentChar] = true;
+          longest = Math.max(longest, currentLength);
+        } else {
+          break;
+        }
       }
     }
-  }
-
-  return true;
+    
+    return longest;
 };
 
-console.log(backspaceCompare(string1, string2));
+console.log(lengthOfLongestSubstring(string));
