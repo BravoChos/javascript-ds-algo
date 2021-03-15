@@ -1,7 +1,16 @@
 /**
- * @param {string} s
- * @return {boolean}
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
  */
-var isPalindrome = function(s) {
+/**
+ * @param {ListNode} head
+ * @param {number} left
+ * @param {number} right
+ * @return {ListNode}
+ */
+ var reverseBetween = function(head, left, right) {
     
 };

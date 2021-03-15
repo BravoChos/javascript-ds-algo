@@ -1,91 +1,59 @@
-const string = "A man, a plan, a canal: Panama";
+/*
+NOTE: The beginning portion builds our test case linked list. Scroll down to the section titled Our Solution for the code solution!
+ */
 
-// reverse solution
-const isValidPalindrome = function (s) {
-  s = s.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
-  let rev = "";
+class ListNode {
+  constructor(val, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+// ---- Generate our linked list ----
+const linkedList = [5, 4, 3, 2, 1].reduce((acc, val) => new ListNode(val, acc), null);
 
-  // generate a reverse string using a reverse for loop.
-  for (let i = s.length - 1; i >= 0; i--) {
-    rev += s[i];
+// ---- Generate our linked list ----
+
+const printList = (head) => {
+  if(!head) {
+    return;
   }
 
-  return rev === s;
+  console.log(head.val);
+  printList(head.next);
+}
+
+// --------- Our solution -----------
+
+var reverseBetween = function(head, m, n) {
+  let currentPos = 1, currentNode = head;
+  let start = head;
+  
+  while(currentPos < m) {
+    start = currentNode;
+    currentNode = currentNode.next;
+    currentPos++;
+  }
+  
+  let newList = null, tail = currentNode;
+  
+  while(currentPos >= m && currentPos <= n) {
+    const next = currentNode.next;
+    currentNode.next = newList;
+    newList = currentNode;
+    currentNode = next;
+    currentPos++;
+  }
+  
+  start.next = newList;
+  tail.next = currentNode;
+  
+  if(m > 1) {
+    return head
+  } else {
+    return newList;
+  }
 };
 
-console.log(isValidPalindrome(string));
-
-// 2 pointers from center
-const isValidPalindrome2 = function (s) {
-  s = s.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
-
-  // initialize left/right pointers to point at the middle index of the string. Remember, indexes start at 0 meaning that we have to floor() the value from dividing length by 2 in order to get the index of the center.
-  let left = Math.floor(s.length / 2),
-    right = left;
-
-  // if the string is even, move left pointer back by 1 so left/right are pointing at the 2 middle values respectively.
-  if (s.length % 2 === 0) {
-    left--;
-  }
-
-  // loop through the string while expanding pointers outwards comparing the characters.
-  while (left >= 0 && right < s.length) {
-    if (s[left] !== s[right]) {
-      return false;
-    }
-
-    left--;
-    right++;
-  }
-
-  return true;
-};
-
-// 2 pointers from outside
-const isValidPalindrome3 = function (s) {
-  s = s.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
-
-  // initialize left/right pointers at start and end of string respectively
-  let left = 0;
-  right = s.length - 1;
-
-  // loop through string characters while comparing them, then move the pointers closer to the center
-  while (left < right) {
-    if (s[left] !== s[right]) {
-      return false;
-    }
-
-    left++;
-    right--;
-  }
-
-  return true;
-};
-
-// optimal solution
-var validPalindrome = function (s) {
-  let start = 0;
-  let end = s.length - 1;
-  while (start < end) {
-    if (s[start] !== s[end]) {
-      return (
-        validSubPalindrome(s, start + 1, end) ||
-        validSubPalindrome(s, start, end - 1)
-      );
-    }
-    start++;
-    end--;
-  }
-  return true;
-};
-
-var validSubPalindrome = function (s, start, end) {
-  while (start < end) {
-    if (s[start] !== s[end]) {
-      return false;
-    }
-    start++;
-    end--;
-  }
-  return true;
-};
+printList(linkedList);
+console.log('after reverse');
+printList(reverseBetween(linkedList, 2, 4));
