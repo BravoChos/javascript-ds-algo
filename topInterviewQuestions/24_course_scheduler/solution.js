@@ -48,7 +48,7 @@ const canFinishNaivelyBFS = function (n, prerequisites) {
   return true;
 };
 
-// 1. Topological Sort without adjacency list
+// 2. Topological Sort without adjacency list
 const canFinish = function(n, prerequisites) {
   const inDegree = new Array(n).fill(0);
   
