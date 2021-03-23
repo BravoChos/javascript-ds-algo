@@ -43,8 +43,9 @@ class TreeNode {
 }
 
 const root = new TreeNode();
-root.insert([1, 1, 1, 1, null, null, null, 1, null, null, null, 1, null, null]);
-
+// root.insert([1, 1, 1, 1, null, null, null, 1, null, null, null, 1, null, null]);
+root.insert([3,9,20,null,null,15,7])
+console.log({ root });
 // ------- Code to generate our binary tree -------
 
 // ------- Our Solution -------
