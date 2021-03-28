@@ -34,7 +34,7 @@ const tree = new TreeNode(1);
 tree.insert([2,3,4,5,null,6,null,7,null,null,null,null,8,null,null,null]);
 // ------- Code to generate our binary tree -------
 
-// ------- Our Solution -------
+// ------- bfs Solution -------
 const rightSideViewBFS = function(root) {  
   if(!root) return [];
   const result = [];
@@ -64,3 +64,28 @@ const rightSideViewBFS = function(root) {
 };
 
 console.log(rightSideViewBFS(tree))
+
+// ------- dfs Solution -------
+const dfs = (node, currentLevel, result) => {
+  if(!node) return;
+  if(currentLevel >= result.length) {
+    result.push(node.value);
+  }
+
+  if(node.right) {
+    dfs(node.right, currentLevel + 1, result);
+  }
+  
+  if(node.left) {
+    dfs(node.left, currentLevel + 1, result);
+  }
+}
+
+const rightSideViewDFS = function(root) {
+  const result = [];
+  
+  dfs(root, 0, result);
+  return result;
+};
+
+console.log(rightSideViewDFS(tree))
