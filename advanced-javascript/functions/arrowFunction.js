@@ -29,4 +29,10 @@ whiteDog.bark();
 
 // Key note!!
 // 일반함수는 자신이 종속된 객체를 this로 가리키며,
-// 화살표ㅛ 함수는 자신이 종속된 인스턴스를 가리킵니다.!!!
+// 화살표 함수는 자신이 종속된 인스턴스를 가리킵니다.!!!
+// 'this' is the object that the function is a property of.
+// 'this' keyword is dynamically scoped. 
+// That is, it doesn't matter where it's written, it matters how the function was called.
+
+// In arrow function, 'this' indicates the instance that the function is a property of.
+// Arrow function lexically bounds 'this'.

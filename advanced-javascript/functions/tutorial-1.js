@@ -28,3 +28,8 @@ console.log(three.call());
 // Method 4
 const four = new Function("return 4");
 console.log(four());
+
+// Method 5? IIFE (immediately invoked function expression)
+(function () {
+  console.log("IIFE");
+})();
