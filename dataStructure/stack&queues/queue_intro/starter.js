@@ -13,7 +13,7 @@ class Queue {
   }
   peek() {
   }
-  enqueue(value){
+  enqueue(){
   }
   dequeue(){
   }

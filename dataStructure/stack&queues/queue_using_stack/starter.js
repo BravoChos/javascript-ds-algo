@@ -1,30 +1,22 @@
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
+// https://leetcode.com/problems/implement-queue-using-stacks/description/
+// 232. Implement Queue using Stacks
+class CrazyQueue {
+  constructor() {
+    this.first = [];
+    this.last = [];
   }
+  enqueue() {}
+  dequeue() {}
+  peek() {}
 }
 
-class Queue {
-  constructor(){
-    this.first = null;
-    this.last = null;
-    this.length = 0;
-  }
-  peek() {
-  }
-  enqueue(value){
-  }
-  dequeue(){
-  }
-  //isEmpty;
-}
-
-const myQueue = new Queue();
-
-
-//Joy
-//Matt
-//Pavel
-//Samir
-
+const myQueue = new CrazyQueue();
+myQueue.peek();
+myQueue.enqueue("Joy");
+myQueue.enqueue("Matt");
+myQueue.enqueue("Pavel");
+myQueue.peek();
+myQueue.dequeue();
+myQueue.dequeue();
+myQueue.dequeue();
+myQueue.peek();
