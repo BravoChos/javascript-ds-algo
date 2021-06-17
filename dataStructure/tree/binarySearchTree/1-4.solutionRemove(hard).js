@@ -67,6 +67,7 @@ class BinarySearchTree {
       } else if (currentNode.value === value) {
         //We have a match, get to work!
 
+        // refer example_BST.png file!!
         //Option 1: No right child:
         if (currentNode.right === null) {
           if (parentNode === null) {
@@ -99,6 +100,7 @@ class BinarySearchTree {
           }
 
           //Option 3: Right child that has a left child
+          // Please do refer 1-4-1,1-4-2,1-4-3 png file for better understanding!!
         } else {
           //find the Right child's left most child
           let leftmost = currentNode.right.left;
@@ -137,8 +139,9 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
+console.log(traverse(tree.root));
 tree.remove(170);
-JSON.stringify(traverse(tree.root));
+console.log(traverse(tree.root));
 
 //     9
 //  4     20
