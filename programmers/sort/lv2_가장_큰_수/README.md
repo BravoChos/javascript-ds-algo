@@ -15,3 +15,5 @@
 - 정답이 너무 클 수 있으니 문자열로 바꾸어 return 합니다.
 
 ## 입출력 예
+
+<img src="./1.png" width="200" height="80" title="1" alt="1"></img>
