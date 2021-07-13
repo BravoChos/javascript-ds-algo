@@ -15,16 +15,16 @@
 
 ## 입출력 예
 
-<img src="./table.png" width="50%" height="80%" title="table" alt="table"></img>
+<img src="./table.png" width="400" height="80%" title="table" alt="table"></img>
 
 ## 입출력 예 설명
 
 예제 #1
 아래와 같이 2개의 네트워크가 있습니다.
 
-<img src="./1.png" width="50%" height="80%" title="1" alt="1"></img>
+<img src="./1.png" width="400" height="80%" title="1" alt="1"></img>
 
 예제 #2
 아래와 같이 1개의 네트워크가 있습니다.
 
-<img src="./2.png" width="50%" height="80%" title="2" alt="2"></img>
+<img src="./2.png" width="400" height="80%" title="2" alt="2"></img>
