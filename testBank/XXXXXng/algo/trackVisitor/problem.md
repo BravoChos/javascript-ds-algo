@@ -1,4 +1,4 @@
-**11. Track Vistors (Meduium)**
+**213. Track Vistors (Meduium)**
 
 In XXX company, building manager should keep a record of all visitor's entrance and/or exit time. When a particular person is judged to have the flu,
 whoever was in close contact to that particular person within same period of time need to classified as potential flu patient.

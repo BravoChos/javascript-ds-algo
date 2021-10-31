@@ -49,7 +49,7 @@ const solution = (_input) => {
       }
     }
   }
-  return result.lenght > 0 ? result : -1;
+  return result.length > 0 ? result : -1;
 };
 
 console.log(solution(["6 14", "2 1 3 4 -3 -4 -1 -2 5 -5 1 6 -1 -6", "1"])); // [2 3 4 6]

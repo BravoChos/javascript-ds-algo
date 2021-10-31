@@ -20,7 +20,6 @@ const solution = (input) => {
   for (let j = 0; j < sortedArray.length; j++) {
     sum += sortedArray[j] * (2 * j + 1);
   }
-  //   console.log(sum);
   input = [];
   return sum;
 };
