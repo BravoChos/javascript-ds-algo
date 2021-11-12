@@ -5,7 +5,7 @@ There are N cards. Every time you pick up the card, the following rules are appl
 
 ```
 1. Multiply the number written on the card by the number of cards drawn so far.
-2. If it is an 2n'th card, it is multiplied by -1.
+2. If it is an 2th card, it is multiplied by -1.
 ```
 
 If the number of cards and its card information, find the maximum possible result you can get accroding to the rules above.
