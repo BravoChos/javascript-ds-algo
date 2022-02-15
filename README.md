@@ -19,9 +19,9 @@ Happy Coding!
      - [3. Garbage Collection](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/3.garbage_collection.md)
      - [4. Memory Leaks](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/4.memory_leaks.md)
 
-1. Big O notation
+1. `Big O notation`
 
-2. Data structures:
+2. `Data structures`
 
 - Arrays
 - Hash Tables
@@ -33,7 +33,7 @@ Happy Coding!
 - Tries
 - Graphs
 
-3. Algorithms:
+3. `Algorithms`
 
 - Recursion
 - Sorting
@@ -43,10 +43,10 @@ Happy Coding!
 - Depth First Search
 - Dynamic Programming
 
-4. Codility:
+4. `Codility`
    resource: https://app.codility.com
    copyright by codility
 
-5. Programmers
+5. `Programmers`
    resource: https://programmers.co.kr/learn/challenges
    copyright by programmers
