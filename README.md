@@ -13,7 +13,7 @@ Technical:
 
 0. Advanced Javascript
 
-   - Foundation I
+   - Foundation I [Foundation I](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I)
 
 1. Big O notation
 
