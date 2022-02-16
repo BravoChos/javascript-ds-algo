@@ -11,6 +11,10 @@ Happy Coding!
 
 Technical:
 
+0. Advanced Javascript
+
+   - Foundation I
+
 1. Big O notation
 
 2. Data structures:
@@ -39,6 +43,6 @@ Technical:
    resource: https://app.codility.com
    copyright by codility
 
-5. Programmers 
+5. Programmers
    resource: https://programmers.co.kr/learn/challenges
    copyright by programmers
