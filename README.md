@@ -21,10 +21,10 @@ Happy Coding!
      - [4. Memory Leaks](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/4.memory_leaks.md)
 
    - `Foundation II`
-     - [1. Execution Context](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_I/1.execution_context.md)
-     - [2. Lexical Environment](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/2.lexical_environment.md)
-     - [3. Hoisting](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/3.hoisting.md)
-     - [4. Context vs Scope](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/4.context.vs.scope.md)
+     - [1. Execution Context](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/1.execution_context.md)
+     - [2. Lexical Environment](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/2.lexical_environment.md)
+     - [3. Hoisting](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/3.hoisting.md)
+     - [4. Context vs Scope](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/4.context.vs.scope.md)
 
 1. `Big O notation`
 
