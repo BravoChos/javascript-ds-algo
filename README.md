@@ -28,7 +28,13 @@ Happy Coding!
      - [4. Context vs Scope](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/4.context.vs.scope.md)
 
    - `Closure`
+
      - [1. Closure](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/closure/closure.md)
+
+   - `Prototype`
+     - [1. Prototype](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/prototype/prototype.md)
+
+<br/>
 
 1. `Big O notation`
 
