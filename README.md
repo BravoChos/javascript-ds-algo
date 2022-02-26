@@ -34,6 +34,9 @@ Happy Coding!
    - `Prototype`
      - [1. Prototype](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/prototype/prototype.md)
 
+   - `Scope`
+     - [1. Scope](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/scope/scope.md)
+
 <br/>
 
 1. `Big O notation`
