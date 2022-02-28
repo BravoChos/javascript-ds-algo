@@ -15,27 +15,27 @@ Happy Coding!
 
    - `Foundation I`
 
-     - [1. Javascript Engine](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_I/1.javascript_engine.md)
-     - [2. Memory Heap & Call Stack](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/2.memoryHeap&callStack.md)
-     - [3. Garbage Collection](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/3.garbage_collection.md)
-     - [4. Memory Leaks](https://github.com/DeepLearnerSC/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/4.memory_leaks.md)
+     - [1. Javascript Engine](https://github.com/BravoChos/javascript-ds-algo/blob/master/advanced-javascript/foundation_I/1.javascript_engine.md)
+     - [2. Memory Heap & Call Stack](https://github.com/BravoChos/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/2.memoryHeap&callStack.md)
+     - [3. Garbage Collection](https://github.com/BravoChos/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/3.garbage_collection.md)
+     - [4. Memory Leaks](https://github.com/BravoChos/javascript-ds-algo/tree/master/advanced-javascript/foundation_I/4.memory_leaks.md)
 
    - `Foundation II`
 
-     - [1. Execution Context](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/1.execution_context.md)
-     - [2. Lexical Environment](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/2.lexical_environment.md)
-     - [3. Hoisting](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/3.hoisting.md)
-     - [4. Context vs Scope](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/4.context.vs.scope.md)
+     - [1. Execution Context](https://github.com/BravoChos/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/1.execution_context.md)
+     - [2. Lexical Environment](https://github.com/BravoChos/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/2.lexical_environment.md)
+     - [3. Hoisting](https://github.com/BravoChos/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/3.hoisting.md)
+     - [4. Context vs Scope](https://github.com/BravoChos/javascript-ds-algo/blob/master/advanced-javascript/foundation_II/4.context.vs.scope.md)
 
    - `Closure`
 
-     - [1. Closure](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/closure/closure.md)
+     - [1. Closure](https://github.com/BravoChos/javascript-ds-algo/blob/master/advanced-javascript/closure/closure.md)
 
    - `Prototype`
-     - [1. Prototype](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/prototype/prototype.md)
+     - [1. Prototype](https://github.com/BravoChos/javascript-ds-algo/blob/master/advanced-javascript/prototype/prototype.md)
 
    - `Scope`
-     - [1. Scope](https://github.com/DeepLearnerSC/javascript-ds-algo/blob/master/advanced-javascript/scope/scope.md)
+     - [1. Scope](https://github.com/BravoChos/javascript-ds-algo/blob/master/advanced-javascript/scope/scope.md)
 
 <br/>
 
