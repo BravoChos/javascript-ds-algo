@@ -35,3 +35,23 @@ Output
     [0  -1   3   4]
 ]
 ```
+
+Another example
+
+```
+input:
+[
+    [INF  -1  0  INF],
+    [-1 INF INF  -1],
+    [INF  -1 INF  -1],
+    [0    -1 INF INF]
+]
+
+output:
+[
+    [3  -1   0   1],
+    [2   2   1  -1],
+    [1  -1   2  -1],
+    [0  -1   3   4]
+]
+```

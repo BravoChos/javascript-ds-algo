@@ -17,6 +17,27 @@ const directions = [
   [0, -1], //left
 ];
 
+const deepCopy = (obj) => {
+  if (typeof obj == "object") {
+    if (Array.isArray(obj)) {
+      var l = obj.length;
+      var r = new Array(l);
+      for (var i = 0; i < l; i++) {
+        r[i] = deepCopy(obj[i]);
+      }
+      return r;
+    } else {
+      var r = {};
+      r.prototype = obj.prototype;
+      for (var k in obj) {
+        r[k] = deepCopy(obj[k]);
+      }
+      return r;
+    }
+  }
+  return obj;
+};
+
 const dfs = (grid, row, col, count) => {
   if (row < 0 || row >= grid.length || col < 0 || col >= grid[0].length || count > grid[row][col])
     return;
@@ -28,13 +49,16 @@ const dfs = (grid, row, col, count) => {
 };
 
 const wallsAndGates = (rooms) => {
-  for (let row = 0; row < rooms.length; row++) {
-    for (let col = 0; col < rooms[0].length; col++) {
-      if (rooms[row][col] === GATE) dfs(rooms, row, col, 0);
+  const result = deepCopy(rooms);
+
+  for (let row = 0; row < result.length; row++) {
+    for (let col = 0; col < result[0].length; col++) {
+      if (result[row][col] === GATE) dfs(result, row, col, 0);
     }
   }
+
+  return result;
 };
 
-wallsAndGates(testMatrix);
-
+console.log(wallsAndGates(testMatrix));
 console.log(testMatrix);
