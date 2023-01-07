@@ -1,5 +1,3 @@
-<!-- https://leetcode.com/problems/course-schedule/ -->
-
 **207. Wall and gates (medium)**
 
 You are given a m x n 2D grid initialized with these three possible values.
@@ -49,9 +47,9 @@ input:
 
 output:
 [
-    [3  -1   0   1],
-    [2   2   1  -1],
-    [1  -1   2  -1],
-    [0  -1   3   4]
+    [INF  -1   0   1],
+    [-1    2   1  -1],
+    [1    -1   2  -1],
+    [0    -1   3   4]
 ]
 ```
