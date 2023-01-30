@@ -34,14 +34,23 @@ root2.insert([3, 9, 20, null, null, 15, 7]);
 root3.insert([1, null, 2]);
 
 // ------- Code to generate our binary tree -------
-var maxDepth = function (node, currentDepth) {
+var maxDepth = function (node) {
+  let currentDepth = 0;
   if (!node) {
     return currentDepth;
   }
 
-  currentDepth++;
+  let q = [node];
+  while (q.length) {
+    for (let i = 0; i < q.length; i++) {
+      let current = q.shift();
+      if (current.right) q.push(current.right);
+      if (current.left) q.push(current.left);
+    }
+    currentDepth++;
+  }
 
-  return Math.max(maxDepth(node.right, currentDepth), maxDepth(node.left, currentDepth));
+  return currentDepth;
 };
 
 console.log(maxDepth(root, 0)); //4

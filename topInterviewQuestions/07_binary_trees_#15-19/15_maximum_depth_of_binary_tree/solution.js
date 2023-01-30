@@ -43,9 +43,9 @@ class TreeNode {
 }
 
 const root = new TreeNode();
-// root.insert([1, 1, 1, 1, null, null, null, 1, null, null, null, 1, null, null]);
-root.insert([3,9,20,null,null,15,7])
-// console.log({ root });
+
+root.insert([3, 9, 20, null, null, 15, 7]);
+
 // ------- Code to generate our binary tree -------
 
 // ------- Our Solution -------
@@ -56,10 +56,7 @@ var maxDepth = function (node, currentDepth) {
 
   currentDepth++;
 
-  return Math.max(
-    maxDepth(node.right, currentDepth),
-    maxDepth(node.left, currentDepth)
-  );
+  return Math.max(maxDepth(node.right, currentDepth), maxDepth(node.left, currentDepth));
 };
 
 console.log(maxDepth(root, 0));
