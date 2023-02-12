@@ -21,3 +21,10 @@ const average = (sum, val, i, arr) => {
 };
 
 console.log(arr.reduce(average));
+
+// #3.
+const numbers = [50, 10, 20, 80, 40];
+
+const max = (x, y) => (x > y ? x : y);
+
+console.log(numbers.reduce(max));
