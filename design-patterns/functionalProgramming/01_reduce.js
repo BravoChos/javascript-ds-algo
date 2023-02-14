@@ -28,3 +28,10 @@ const numbers = [50, 10, 20, 80, 40];
 const max = (x, y) => (x > y ? x : y);
 
 console.log(numbers.reduce(max));
+
+// #4.
+let str = "hello";
+
+const reverse = (s) => s.split("").reduceRight((x, y) => x + y);
+
+console.log(reverse(str));
