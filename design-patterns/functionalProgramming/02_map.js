@@ -29,3 +29,17 @@ const toCelcius = (obj) => {
 const result = location.map(toCelcius);
 
 console.log(result);
+
+// #03.
+const range = (start, stop) => {
+  return new Array(stop - start).fill(0).map((v, i) => start + i);
+};
+
+console.log(range(1, 10));
+
+// #04.
+const charCodeToString = (c) => String.fromCharCode(c);
+
+const AtoZ = range("A".charCodeAt(), "Z".charCodeAt() + 1).map(charCodeToString);
+
+console.log(AtoZ);
