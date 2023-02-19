@@ -9,3 +9,10 @@ const isEven = (n) => n % 2 === 0;
 const evenNums = numbers.filter(isEven);
 
 console.log(evenNums);
+
+// #02.
+const values = [1, "", 2, undefined, 3, 4];
+
+const filtered = values.filter((value) => Boolean(value));
+
+console.log(filtered);
