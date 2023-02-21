@@ -26,5 +26,7 @@ const users = [
 ];
 
 const olderThen30 = (user) => user.age > 30;
+const isFemale = (user) => user.gender === "female";
 
 console.log(users.filter(olderThen30));
+console.log(users.filter(olderThen30).filter(isFemale));
