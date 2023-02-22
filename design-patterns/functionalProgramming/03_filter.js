@@ -17,7 +17,7 @@ const filtered = values.filter((value) => Boolean(value));
 
 console.log(filtered);
 
-// #03.
+// #03,04.
 const users = [
   { name: "John", age: 25, gender: "male" },
   { name: "Cho", age: 31, gender: "female" },
@@ -30,3 +30,13 @@ const isFemale = (user) => user.gender === "female";
 
 console.log(users.filter(olderThen30));
 console.log(users.filter(olderThen30).filter(isFemale));
+
+// #05.
+const byProperty = (prop, fn) => {
+  return (user) => {
+    return user.hasOwnProperty(prop) && fn(user[prop]);
+  };
+};
+
+console.log(users.filter(byProperty("age", (user) => user > 30)));
+console.log(users.filter(byProperty("gender", (user) => user === "male")));
