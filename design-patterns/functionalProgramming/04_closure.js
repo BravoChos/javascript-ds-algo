@@ -11,3 +11,23 @@ function fn() {
   console.log(x, y);
 }
 fn();
+
+// Lexical Environment
+// execution environment(or context) including the variables, functions,
+// and scope chains that are accessible within that context
+
+function outer() {
+  let x = 10;
+  function inner() {
+    console.log(x);
+  }
+  return inner;
+}
+
+const fn = outer();
+
+fn();
+
+// 1. hide data and make it private
+// 2. persist state
+// 3. FP: curing and partial application
