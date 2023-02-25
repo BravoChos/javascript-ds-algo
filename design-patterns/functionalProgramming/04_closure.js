@@ -9,7 +9,7 @@ to build up the original function with all of its arguments.
 */
 
 // Currying: f(a,b,c) => f(a)(b)(c)
-
+// #01.
 function add(x, y) {
   return x + y;
 }
@@ -24,3 +24,7 @@ function curried_add(x) {
 }
 
 console.log(curried_add(7)(3));
+
+// #02.
+const curried_add2 = (x) => (y) => x + y;
+console.log(curried_add2(19)(1));
