@@ -1,30 +1,33 @@
 // FP pattern - closure
 
-/*
-Currying is a technique used in JavaScript (and other programming languages)
-that involves breaking down a function
-that takes multiple arguments into a series of functions
-that take one argument each.The resulting functions can be composed together
-to build up the original function with all of its arguments.
-*/
+// 1. define another function within a function. This is called a "nested function" or "inner function.
+// 2. returns an inner function
+// 3. remember Scope
 
-// Currying: f(a,b,c) => f(a)(b)(c)
 // #01.
-function add(x, y) {
-  return x + y;
+let y = 100;
+function fn() {
+  let x = 10;
+  console.log(x, y);
+}
+fn();
+
+// Lexical Environment
+// execution environment(or context) including the variables, functions,
+// and scope chains that are accessible within that context
+
+function outer() {
+  let x = 10;
+  function inner() {
+    console.log(x);
+  }
+  return inner;
 }
 
-// using currying, we can break down this function into a series of functions
-// that each take one argument:
+const testFn = outer();
 
-function curried_add(x) {
-  return function (y) {
-    return x + y;
-  };
-}
+testFn();
 
-console.log(curried_add(7)(3));
-
-// #02.
-const curried_add2 = (x) => (y) => x + y;
-console.log(curried_add2(19)(1));
+// 1. hide data and make it private
+// 2. persist state
+// 3. FP: Currying and partial application
