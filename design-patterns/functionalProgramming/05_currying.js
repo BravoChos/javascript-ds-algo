@@ -29,13 +29,18 @@ console.log(curried_add(7)(3));
 const curried_add2 = (x) => (y) => x + y;
 console.log(curried_add2(19)(1));
 
-// #03.
+// #03, 04
 function makeCoffee(roastType) {
   return function (sugar) {
     return function (cream) {
-      return console.log(`Coffee, ${roastType}, sugar: ${sugar}, cream: ${cream}`);
+      return console.log(`coffee: ${roastType}, sugar: ${sugar}, cream: ${cream}`);
     };
   };
 }
 
-makeCoffee("dark chocolate", 18, 25);
+makeCoffee("dark chocolate")(18)(25);
+// use case
+const mediumRoast = makeCoffee("medium roast");
+
+const order1 = mediumRoast(1)(2);
+const order2 = mediumRoast(2)(3);
