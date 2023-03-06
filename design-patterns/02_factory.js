@@ -86,3 +86,7 @@ const mike1 = factory.create({
 console.log(mike1);
 console.log(mike1.getBrand());
 console.log(mike1.getSize());
+
+// #02.
+const items = data.map((item) => factory.create(item));
+console.log(items);
