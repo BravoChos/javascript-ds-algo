@@ -48,3 +48,8 @@ subj.subscribe(c);
 console.log(subj.getObserverList());
 
 subj.notifyAll();
+
+subj.unsubscribe(c);
+
+console.log("----------unsubscribe c------------");
+subj.notifyAll();
