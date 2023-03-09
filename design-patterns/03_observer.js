@@ -34,3 +34,17 @@ class Observer {
     console.log(`${this.name}: notified from ${subj} class!`);
   }
 }
+
+const subj = new Subject();
+
+const a = new Observer("A");
+const b = new Observer("B");
+const c = new Observer("C");
+
+subj.subscribe(a);
+subj.subscribe(b);
+subj.subscribe(c);
+
+console.log(subj.getObserverList());
+
+subj.notifyAll();
