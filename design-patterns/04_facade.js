@@ -29,7 +29,10 @@ class RestaurantFacade {
     kitchen.cookSide();
     kitchen.prepareDrinks();
 
-    const FoodService = new FoodService();
-    return FoodService.serve();
+    const foodService = new FoodService();
+    return foodService.serve();
   }
 }
+
+const facade = new RestaurantFacade();
+facade.newOrder();
