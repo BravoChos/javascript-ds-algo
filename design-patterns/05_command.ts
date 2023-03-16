@@ -24,3 +24,22 @@ class State {
         this._state = value;
     }
 }
+
+// Invoker
+class BankManager {
+    private _state;
+    private _commands = {};
+    constructor(state) {
+        this._state = state;
+    }
+
+    registerCommands(...args) {
+        for (const cmd of args) {
+            this._commands[cmd.constructor.name] = cmd;
+        }
+    }
+
+    executeCmd(cmdName, param) {
+        this._commands[cmdName].execute(this._state, param);
+    }
+}
