@@ -43,3 +43,20 @@ class BankManager {
         this._commands[cmdName].execute(this._state, param);
     }
 }
+
+// Command
+class Deposit implements ICommand {
+    execute(...params): void {
+        const [state, amount] = params;
+        const prevState = state.getState();
+        state.setState(prevState + amount);
+    }
+}
+
+class Withdrawal implements ICommand {
+    execute(...params): void {
+        const [state, amount] = params;
+        const prevState = state.getState();
+        state.setState(prevState - amount);
+    }
+}
