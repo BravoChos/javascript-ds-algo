@@ -60,3 +60,24 @@ class Withdrawal implements ICommand {
         state.setState(prevState - amount);
     }
 }
+
+// Example 2
+// 1. create command
+const deposit = new Deposit();
+const withdrawal = new Withdrawal();
+// 2. create receiver
+const state = new State(0);
+// 3. register invoker instance & receiver
+const bankManager = new BankManager(state);
+// 4. register command
+bankManager.registerCommands(deposit, withdrawal);
+
+// 5. execute command
+bankManager.executeCmd("Deposit", 100);
+bankManager.executeCmd("Deposit", 1000);
+
+console.log(state.getState());
+
+bankManager.executeCmd("Withdrawal", 1000);
+
+console.log(state.getState());
