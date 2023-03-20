@@ -5,3 +5,13 @@
 
 // In other words, the Proxy acts as an intermediary between the client and the real object,
 // allowing the client to interact with the proxy instead of the real object.
+
+// 1. Subject interface
+interface Payment {
+    request(amount: number): void;
+}
+
+// 2. Real Subject
+// 3. Proxy
+
+// const proxy = new Proxy(targetObject, handler);
