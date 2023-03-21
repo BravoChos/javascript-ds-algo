@@ -12,6 +12,13 @@ interface Payment {
 }
 
 // 2. Real Subject
+class Cash implements Payment {
+    request(amount: number): void {
+        console.log(`payment request complete. Amount:${amount}`);
+    }
+}
+
+const targetObject = new Cash();
 // 3. Proxy
 
 // const proxy = new Proxy(targetObject, handler);
