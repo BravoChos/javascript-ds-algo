@@ -20,5 +20,13 @@ class Cash implements Payment {
 
 const targetObject = new Cash();
 // 3. Proxy
-
 // const proxy = new Proxy(targetObject, handler);
+const paymentProxy = new Proxy(targetObject, {
+    get: (object, prop) => {
+        // console.log();
+        if (prop === "request") {
+            return object[prop];
+        }
+        throw new Error("operation not implemented");
+    },
+});
