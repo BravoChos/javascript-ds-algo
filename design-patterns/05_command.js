@@ -1,66 +1,53 @@
+"use strict";
 // Command Pattern
-
 // It is a behavioral design pattern that encapsulates a request as an object,
 // thereby allowing for the parameterization of clients with different requests,
 // queues or log requests, and supports undoable operations.
-
 // Interface
-abstract class ICommand {
-    abstract execute(args: any): void;
+class ICommand {
 }
-
 // Reciever
 class State {
-    private _state: number;
-    constructor(state: number) {
+    constructor(state) {
         this._state = state;
     }
-
     getState() {
         return this._state;
     }
-
-    setState(value: number) {
+    setState(value) {
         this._state = value;
     }
 }
-
 // Invoker
 class BankManager {
-    private _state;
-    private _commands: any = {};
-    constructor(state: any) {
+    constructor(state) {
+        this._commands = {};
         this._state = state;
     }
-
-    registerCommands(...args: any[]) {
+    registerCommands(...args) {
         for (const cmd of args) {
             this._commands[cmd.constructor.name] = cmd;
         }
     }
-
-    executeCmd(cmdName: string, param: any) {
+    executeCmd(cmdName, param) {
         this._commands[cmdName].execute(this._state, param);
     }
 }
-
 // Command
-class Deposit implements ICommand {
-    execute(...params: any): void {
+class Deposit {
+    execute(...params) {
         const [state, amount] = params;
         const prevState = state.getState();
         state.setState(prevState + amount);
     }
 }
-
-class Withdrawal implements ICommand {
-    execute(...params: any): void {
+class Withdrawal {
+    execute(...params) {
         const [state, amount] = params;
         const prevState = state.getState();
         state.setState(prevState - amount);
     }
 }
-
 // Example
 // 1. create command
 const deposit = new Deposit();
@@ -71,13 +58,9 @@ const state = new State(0);
 const bankManager = new BankManager(state);
 // 4. register command
 bankManager.registerCommands(deposit, withdrawal);
-
 // 5. execute command
 bankManager.executeCmd("Deposit", 100);
 bankManager.executeCmd("Deposit", 1000);
-
 console.log(state.getState());
-
 bankManager.executeCmd("Withdrawal", 1000);
-
 console.log(state.getState());
