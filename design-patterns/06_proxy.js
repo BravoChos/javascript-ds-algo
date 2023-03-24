@@ -20,3 +20,4 @@ const paymentProxy = new Proxy(targetObject, {
     },
 });
 paymentProxy.request(100);
+paymentProxy.add(100); // will throw error, 'add' method is not defined
