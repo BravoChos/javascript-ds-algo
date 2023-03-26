@@ -1,5 +1,7 @@
 import ISmartDevice from "./ISmartDevice";
 
+import TV from "./TV";
+
 class SmartHomeClient {
     addConnection(device: ISmartDevice) {
         try {
@@ -12,3 +14,4 @@ class SmartHomeClient {
 }
 
 const smartHomeClient = new SmartHomeClient();
+smartHomeClient.addConnection(new TV());
