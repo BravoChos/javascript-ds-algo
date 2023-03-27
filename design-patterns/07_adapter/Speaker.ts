@@ -1,10 +1,10 @@
 import ISmartDevice from "./ISmartDevice";
 
-class TV implements ISmartDevice {
+class Speaker implements ISmartDevice {
     private _device: string;
 
     constructor() {
-        this._device = "TV";
+        this._device = "Speaker";
     }
 
     connect() {
@@ -20,4 +20,4 @@ class TV implements ISmartDevice {
     }
 }
 
-export default TV;
+export default Speaker;
