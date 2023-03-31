@@ -1,6 +1,9 @@
 import ISmartDevice from "./ISmartDevice";
+import Monitor from "./Monitor"; // 다른 vendor device
+import MonitorAdapter from "./MonitorAdapter";
 
 import TV from "./TV";
+import Speaker from "./Speaker";
 
 class SmartHomeClient {
     addConnection(device: ISmartDevice) {
@@ -15,3 +18,5 @@ class SmartHomeClient {
 
 const smartHomeClient = new SmartHomeClient();
 smartHomeClient.addConnection(new TV());
+smartHomeClient.addConnection(new Speaker());
+smartHomeClient.addConnection(new MonitorAdapter(new Monitor()));
